@@ -1,0 +1,7 @@
+---
+- role: andrewrothstein.libvirt
+  version: 1.0.0
+- src: andrewrothstein.sudoers
+  version: v1.0.9
+- src: bradfordwagner.github-runner
+  version: 0.2.2
