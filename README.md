@@ -27,7 +27,7 @@ git clone https://github.com/bradfordwagner/container-ansible.git src && cd src
 
 . /ansible_env/bin/activate
 git clone https://github.com/bradfordwagner/github-runners.git src && cd src
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r requirements.yml --force
 ansible-playbook \
   -i localhost, -c local \
   --ask-become-pass \
