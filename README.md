@@ -27,7 +27,6 @@ git clone https://github.com/bradfordwagner/container-ansible.git src && cd src
 
 . /ansible_env/bin/activate
 git clone https://github.com/bradfordwagner/github-runners.git src && cd src
-git checkout feature/init # todo: remove this line
 ansible-galaxy install -r requirements.yml
 ansible-playbook \
   -i localhost, -c local \
@@ -42,19 +41,5 @@ ansible-playbook -i localhost ./pb-self.yml -e runners_token=${gh_pat}
 # this is what the cicd runs
 ansible-playbook -i localhost ./pb-vms.yml -e runners_token=${gh_pat}
 
-# install vm to gh repo
-git clone https://github.com/bradfordwagner/ansible-role-github-runner
-cd ansible-role-github-runner
-git checkout feature/init # todo: remove this line
-git pull
-. /ansible_env/bin/activate
-ansible-galaxy install -r meta/requirements.yml
-# https://docs.github.com/en/rest/actions/self-hosted-runners?apiVersion=2022-11-28#create-a-registration-token-for-a-repository
-# "Administration" repository permissions (write)
-gh_pat=...
-ansible-playbook -i localhost ./test.yml -e runners_token=${gh_pat} -e runners_download_bin_only=false
-
-
 # install docker https://docs.docker.com/engine/install/debian/#install-using-the-repository
-
 ```
