@@ -5,4 +5,4 @@
       vars:
         runners_repos:
           - name: gh-template-ansible-role
-        runners_instances: 2
+        runners_instances: 5
