@@ -1,0 +1,4 @@
+runners:
+  hosts:
+    orangepi5pro:
+      ansible_user: root

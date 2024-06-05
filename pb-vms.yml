@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  roles:
+    - role: bradfordwagner.github-runner
+      vars:
+        runners_repos:
+          - name: gh-template-ansible-role

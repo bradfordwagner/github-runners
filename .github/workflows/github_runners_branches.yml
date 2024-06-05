@@ -1,0 +1,41 @@
+name: github-runners-branches
+on:
+  - push
+  - workflow_dispatch
+jobs:
+  config-yaml:
+    name: config.yaml
+    runs-on: ubuntu-latest
+    outputs:
+      config: ${{ steps.config.outputs.config }}
+    steps:
+      - uses: actions/checkout@v4
+      # https://github.com/chrisdickinson/setup-yq/blob/latest/action.yml
+      - uses: chrisdickinson/setup-yq@v1.0.1
+        name: yq=v4.43.1
+        with:
+          yq-version: v4.43.1
+      - name: jq=1.7
+        uses: dcarbone/install-jq-action@v2
+        with:
+          version: 1.7
+      - name: export=config
+        id: config
+        run: echo "config=$(yq -oj '.' config.yaml | jq -cr)" >> $GITHUB_OUTPUT
+  branches:
+    name: ${{ matrix.vms.name }}
+    permissions: write-all
+    runs-on: ${{ matrix.vms.name }}
+    needs: config-yaml
+    strategy:
+      fail-fast: false
+      matrix:
+        vms: ${{ fromJSON(needs.config-yaml.outputs.config).vms }}
+    steps:
+      - name: checkout=self
+        uses: actions/checkout@v4
+      - run: |
+          . /ansible_env/bin/activate
+          set -x
+          ansible-galaxy install -f -r requirements.yml
+          ansible-playbook pb-vms.yml -e runners_token=${{ secrets.TOKEN }}
