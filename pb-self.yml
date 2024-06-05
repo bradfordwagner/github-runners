@@ -5,3 +5,4 @@
       vars:
         runners_repos:
           - name: github-runners
+        runners_instances: 1
