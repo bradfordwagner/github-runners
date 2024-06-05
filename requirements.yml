@@ -4,5 +4,5 @@
 - src: andrewrothstein.sudoers
   version: v1.0.9
 - src: bradfordwagner.github-runner
-  version: 0.3.0-beta2
+  version: 0.3.0-beta3
   # version: 0.2.2
