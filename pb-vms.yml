@@ -2,7 +2,12 @@
 - hosts: localhost
   roles:
     - role: bradfordwagner.github-runner
-      vars:
-        runners_repos:
-          - name: gh-template-ansible-role
-        runners_instances: 8
+  vars:
+    runners_instances: '{{ hosts_to_config[ansible_hostname].instances }}'
+    hosts_to_config:
+      gh-runner-mba:
+        instances: 8
+      gh-runner-studio:
+        instances: 10
+    runners_repos:
+      - name: gh-template-ansible-role
