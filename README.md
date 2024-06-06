@@ -10,7 +10,11 @@ sudo apt install -y ansible git
 
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
-
+```
+### VM setup
+```bash
+# download image
+wget https://cdimage.debian.org/debian-cd/current/arm64/iso-dvd/debian-12.5.0-arm64-DVD-1.iso
 ```
 ### Once VM is booted up
 ```bash
