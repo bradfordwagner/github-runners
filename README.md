@@ -46,4 +46,6 @@ ansible-playbook -i localhost ./pb-self.yml -e runners_token=${gh_pat}
 ansible-playbook -i localhost ./pb-vms.yml -e runners_token=${gh_pat}
 
 # install docker https://docs.docker.com/engine/install/debian/#install-using-the-repository
+sudo usermod -aG docker $USER # allow access to docker sock
+newgrp docker # give access without restart
 ```
