@@ -20,15 +20,21 @@ wget https://cdimage.debian.org/debian-cd/current/arm64/iso-dvd/debian-12.5.0-ar
 ```bash
 # remove cdrom first line from /etc/apt/sources.list
 su root
+apt-get install -y git sudo
 vi /etc/apt/sources.list
+vi /etc/sudoers # add gh
+ALL            ALL = (ALL) NOPASSWD: ALL
+
 
 # install essentials
 # for now we're cheating to win.. just a little bit
 su root
-apt-get install -y git
+cd
 git clone https://github.com/bradfordwagner/container-ansible.git src && cd src
 ./install_ansible.sh debian ~/src
 
+# as gh user
+sudo rm -rf ~/src ~/.ansible
 . /ansible_env/bin/activate
 git clone https://github.com/bradfordwagner/github-runners.git src && cd src
 ansible-galaxy install -r requirements.yml --force
