@@ -10,6 +10,7 @@
       gh-runner-studio:
         instances: 10
     runners_repos:
+      - name: container-base
       - name: gh-template-ansible-playbook
       - name: gh-template-ansible-role
       - name: gh-template-mirror-image
