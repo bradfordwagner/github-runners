@@ -1,4 +1,5 @@
 # created by init task for use with github actons
 vms:
   - name: gh-runner-mba
+  - name: gh-runner-opp5
   - name: gh-runner-studio
