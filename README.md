@@ -1,12 +1,11 @@
 # github-runners
 
 
-## Prerequisites
+## Prerequisites (orangepi)
 ```bash
 sudo apt install -y qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils libguestfs-tools
 
 sudo apt install -y ansible git
-
 
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
