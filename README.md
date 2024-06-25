@@ -4,6 +4,13 @@
 ## Prerequisites (orangepi)
 ```bash
 sudo apt install -y qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils libguestfs-tools
+sudo apt install --no-install-recommends qemu-system-arm libvirt-clients \
+  libvirt-daemon-system bridge-utils virtinst libvirt-daemon qemu-utils \
+  qemu-efi-aarch64
+sudo apt install --no-install-recommends libvirt-daemon \
+  libvirt-daemon-system libvirt-clients qemu-kvm qemu-system-arm \
+  qemu-utils qemu-efi-aarch64 qemu-efi-arm arm-trusted-firmware \
+  seabios bridge-utils virtinst dnsmasq-base ipxe-qemu
 
 sudo apt install -y ansible git
 
