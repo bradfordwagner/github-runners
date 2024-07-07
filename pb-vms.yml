@@ -12,6 +12,12 @@
       gh-runner-studio:
         instances: 10
     runners_repos:
+      - name: ansible-role-azure-blob-cli
+      - name: ansible-role-docker-buildkit
+      - name: ansible-role-github-runner
+      - name: ansible-role-gitops-toolkit
+      - name: ansible-role-go-releaser-install
+      - name: ansible-role-jumpdir
       - name: container-ansible
       - name: container-base
       - name: gh-template-ansible-playbook
