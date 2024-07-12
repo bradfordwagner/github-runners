@@ -52,6 +52,7 @@ ansible-playbook \
 
 # https://docs.github.com/en/rest/actions/self-hosted-runners?apiVersion=2022-11-28#create-a-registration-token-for-a-repository
 # "Administration" repository permissions (write)
+# https://github.com/settings/personal-access-tokens/3458173
 gh_pat=...
 ansible-playbook -i localhost ./pb-self.yml -e runners_token=${gh_pat}
 
