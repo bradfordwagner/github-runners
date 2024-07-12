@@ -13,18 +13,18 @@
         instances: 10
     runners_repos:
       - name: ansible-role-azure-blob-cli
-      - name: ansible-role-docker-buildkit
-      - name: ansible-role-github-runner
-      - name: ansible-role-gitops-toolkit
-      - name: ansible-role-go-releaser-install
-      - name: ansible-role-jumpdir
-      - name: container-ansible
-      - name: container-base
-      - name: container-bkch
-      - name: container-go-builder
-      - name: container-terraform
-      - name: container-vault-k8s-auth
-      - name: devtainer
-      - name: gh-template-ansible-playbook
-      - name: gh-template-ansible-role
-      - name: gh-template-mirror-image
+      # - name: ansible-role-docker-buildkit
+      # - name: ansible-role-github-runner
+      # - name: ansible-role-gitops-toolkit
+      # - name: ansible-role-go-releaser-install
+      # - name: ansible-role-jumpdir
+      # - name: container-ansible
+      # - name: container-base
+      # - name: container-bkch
+      # - name: container-go-builder
+      # - name: container-terraform
+      # - name: container-vault-k8s-auth
+      # - name: devtainer
+      # - name: gh-template-ansible-playbook
+      # - name: gh-template-ansible-role
+      # - name: gh-template-mirror-image
