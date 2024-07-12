@@ -3,5 +3,8 @@
   version: 1.0.0
 - src: andrewrothstein.sudoers
   version: v1.0.9
-- src: bradfordwagner.github-runner
-  version: 0.6.1
+# - src: bradfordwagner.github-runner
+#   version: 0.6.1
+- src: https://github.com/bradfordwagner/ansible-role-github-runner.git
+  version: feature/link
+  name: bradfordwagner.github-runner
