@@ -28,4 +28,5 @@
       - name: devtainer
       - name: gh-template-ansible-playbook
       - name: gh-template-ansible-role
+      - name: gh-template-go-cli
       - name: gh-template-mirror-image
