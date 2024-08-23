@@ -24,6 +24,7 @@
       - name: container-go-builder
       - name: container-pack
       - name: container-terraform
+      - name: container-vault
       - name: container-vault-k8s-auth
       - name: devtainer
       - name: gh-template-ansible-playbook
