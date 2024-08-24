@@ -4,6 +4,7 @@
     - role: bradfordwagner.github-runner
   vars:
     runners_instances: '{{ hosts_to_config[ansible_hostname].instances }}'
+    runners_version: 2.319.1
     hosts_to_config:
       gh-runner-mba:
         instances: 8
