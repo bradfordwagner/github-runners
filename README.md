@@ -28,7 +28,7 @@ wget https://cdimage.debian.org/debian-cd/current/arm64/iso-dvd/debian-12.5.0-ar
 # remove cdrom first line from /etc/apt/sources.list
 su root
 vi /etc/apt/sources.list
-apt-get install -y git sudo curl
+apt-get install -y git sudo curl uuid-runtime
 vi /etc/sudoers # add gh
 ALL            ALL = (ALL) NOPASSWD: ALL
 
