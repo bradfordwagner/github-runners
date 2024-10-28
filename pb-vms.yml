@@ -9,7 +9,7 @@
       gh-runner-mba:
         instances: 8
       gh-runner-opp5:
-        instances: 4
+        instances: 8
       gh-runner-studio:
         instances: 10
     runners_repos:
