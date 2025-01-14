@@ -3,7 +3,8 @@
   roles:
     - role: bradfordwagner.github-runner
       vars:
-        runners_version: 2.319.1
+        # https://github.com/actions/runner/releases
+        runners_version: 2.321.0
         runners_repos:
           - name: github-runners
         runners_instances: 1
