@@ -22,6 +22,8 @@ sudo systemctl start libvirtd
 ```bash
 # download image
 wget https://cdimage.debian.org/debian-cd/current/arm64/iso-dvd/debian-12.5.0-arm64-DVD-1.iso
+
+virt-manager -c "qemu:///session" --no-fork
 ```
 ### Once VM is booted up
 ```bash
