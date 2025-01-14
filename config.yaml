@@ -2,4 +2,4 @@
 vms:
   # - name: gh-runner-mba
   - name: gh-runner-opp5
-  # - name: gh-runner-studio
+  - name: gh-runner-studio
